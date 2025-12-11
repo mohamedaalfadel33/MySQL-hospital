@@ -19,6 +19,12 @@ app.use(express.urlencoded({ extended: true }));
 const patientRouter = require('./routes/patientRouter');
 app.use('/api/patients', patientRouter);
 
+const doctorRouter = require('./routes/doctorRouter');
+app.use('/api/doctors', doctorRouter);
+
+const departmentRouter = require('./routes/departmentRouter');
+app.use('/api/departments', departmentRouter);
+
 //testing
 app.get('/', (req, res) => {
   res.json({ message: 'hello from api' });
